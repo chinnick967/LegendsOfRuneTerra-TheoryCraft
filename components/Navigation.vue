@@ -5,7 +5,7 @@
             <li><a>Cards</a></li>
             <li><a>Decks</a></li>
             <li><a>Mechanics</a>
-                <ul>
+                <ul class="sub">
                     <li><a>Regions</a></li>
                     <li><a>Keywords</a></li>
                     <li><a>Level Up</a></li>
@@ -18,11 +18,26 @@
             <li><a>Live Streams</a></li>
         </ul>
         <ul id="right-nav">
-            <li><input type="text" placeholder="Cards, keywords, decks, etc." /></li>
-            <li><button>Sign In</button></li>
+            <li><SearchBox /></li>
+            <li><Themer /></li>
+            <li><SignIn /></li>
         </ul>
     </nav>
 </template>
+
+<script>
+import SearchBox from '~/components/SearchBox.vue';
+import SignIn from '~/components/SignIn.vue';
+import Themer from '~/components/Themer.vue';
+
+export default {
+  components: {
+    SearchBox,
+    SignIn,
+    Themer,
+  }
+}
+</script>
 
 <style lang="scss" scoped>
 
@@ -31,15 +46,16 @@ nav {
     top: 0px;
     left: 0px;
     width: 100%;
-    height: 100px;
-    padding: 25px 20%;
+    height: 65px;
+    padding: 0px 15%;
+    background: #111111;
     ul {
         list-style-type: none;
         height: 100%;
         display: inline-block;
         vertical-align: middle;
-        padding: 15px 0;
-        color: #35495e;
+        padding: 20px 0;
+        color: #338de4;
         font-size: 16px;
         li {
             display: inline-block;
@@ -48,7 +64,7 @@ nav {
             padding: 0px 20px;
             font-weight: bold;
             position: relative;
-            ul {
+            sub.ul {
                 position: absolute;
                 display: block;
                 top: 25px;
@@ -86,6 +102,7 @@ nav {
 
 #right-nav {
     float: right;
+    padding: 0;
 }
 
 </style>

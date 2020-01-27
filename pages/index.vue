@@ -1,6 +1,7 @@
 <template>
   <div class="container">
     <Navigation />
+    <HomeMenu />
     <div>
       <logo />
       <h1 class="title">
@@ -32,11 +33,13 @@
 <script>
 import Logo from '~/components/Logo.vue';
 import Navigation from '~/components/Navigation.vue';
+import HomeMenu from '~/components/HomeMenu.vue';
 
 export default {
   components: {
     Logo,
     Navigation,
+    HomeMenu,
   }
 }
 </script>
@@ -49,7 +52,7 @@ export default {
   justify-content: center;
   align-items: center;
   text-align: center;
-  background-image: url('~assets/backgrounds/animated-freljord.gif');
+  background-image: url('~assets/backgrounds/ashe-background.jpg');
   background-size: cover;
   background-position: top center;
 }
